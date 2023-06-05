@@ -1,0 +1,75 @@
+<navbar></navbar>
+<div style="background-color: rgba(202, 202, 208, 0.362);">
+    <div class="container pt-100 mb-5">
+        <div style="background-color: rgba(128, 125, 191, 0.288);">
+            <div class="row">
+                <div class="col-3">
+                    <div class="d-flex justify-content-center">
+                        <img src="../../assets/gifs/h.gif" alt="" class="" style="width: 300px;"
+                            class="img-fluid rounded">
+                    </div>
+                    <br>
+                    <category-list (category)="getCategory($event)"></category-list>
+                    <br>
+                    <img src="../../assets/gifs/ad.gif" alt="" style="width: 300px;">
+                    <br>
+                    <br>
+
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert d-flex justify-content-between align-items-center text-white"
+                                style="background-color: #843131;">
+                                <div>{{selectedProducts.length}} tane bilgi sayfası bulundu.</div>
+                                <div class="d-flex align-items-center">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <product-list [products]="products"></product-list>
+
+                    <div class="row ">
+                        <div class="col">
+                            <div class="btn-group">
+                                <button *ngFor="let page of pageNumbers" (click)="changePage(page)"
+                                    class="btn btn-outline text-white" style="background-color: #18191a;"
+                                    [class.active]="page==selectedPage">
+                                    {{ page }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="text-primary">Hakkımızda</h3>
+                        <p class="text-light">Tez için bu uygulamayı yapıyorum.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-success">İletişim Bilgileri</h3>
+                        <p class="text-light">Adres: Antalya</p>
+                        <p class="text-light">Telefon: 05354455118</p>
+                        <p class="text-light">E-posta: selinkahraman45@gmail.com</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-danger">Sosyal Medya</h3>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#">@selinnkhrmnn <i
+                                        class="fab fa-twitter text-light"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook text-light"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram text-light"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
