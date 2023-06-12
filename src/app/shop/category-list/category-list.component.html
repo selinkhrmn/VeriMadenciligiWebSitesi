@@ -1,9 +1,9 @@
-<div class="list-group " style="background-color: #b6d8d4;">
-    <button href="#" (click)="changeCategory()" class="list-group-item list-group-item-action text-white" style="background-color:#843131;">
+<div class="list-group " style="background-color: #315550;">
+    <button href="#" (click)="changeCategory()" class="list-group-item list-group-item-action text-white" style="background-color: rgb(139, 142, 137);">
         Tüm Kategoriler
     </button>
     <button *ngFor="let c of categories" (click)="changeCategory(c)" 
-        class="list-group-item list-group-item-action active text-white" [class.active]="c==selectedCategory" style="background-color:#843131;">
+        class="list-group-item list-group-item-action active text-white" [class.active]="c==selectedCategory" style="background-color: rgb(150, 152, 147);">
         {{ c.name }}
     </button>
 </div>

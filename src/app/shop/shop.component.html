@@ -1,7 +1,7 @@
 <navbar></navbar>
-<div style="background-color: rgba(202, 202, 208, 0.362);">
+<div style="background-color: rgb(73, 117, 136);">
     <div class="container pt-100 mb-5">
-        <div style="background-color: rgba(128, 125, 191, 0.288);">
+        <div style="background-color: rgb(128, 154, 165);">
             <div class="row">
                 <div class="col-3">
                     <div class="d-flex justify-content-center">
@@ -11,16 +11,17 @@
                     <br>
                     <category-list (category)="getCategory($event)"></category-list>
                     <br>
-                    <img src="../../assets/gifs/ad.gif" alt="" style="width: 300px;">
+                    <div class="d-flex justify-content-center">
+                        <img src="../../assets/gifs/ad.gif" alt="" class="" style="width: 300px;"
+                            class="img-fluid rounded">
+                    </div>
                     <br>
-                    <br>
-
                 </div>
                 <div class="col-9">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="alert d-flex justify-content-between align-items-center text-white"
-                                style="background-color: #843131;">
+                                style="background-color: rgb(139, 142, 137)">
                                 <div>{{selectedProducts.length}} tane bilgi sayfası bulundu.</div>
                                 <div class="d-flex align-items-center">
 
@@ -28,14 +29,15 @@
                             </div>
                         </div>
                     </div>
+                    <br>
 
                     <product-list [products]="products"></product-list>
 
                     <div class="row ">
-                        <div class="col">
+                        <div class="d-flex justify-content-center">
                             <div class="btn-group">
                                 <button *ngFor="let page of pageNumbers" (click)="changePage(page)"
-                                    class="btn btn-outline text-white" style="background-color: #18191a;"
+                                    class="btn btn-outline text-white" style="background-color: rgba(22, 66, 91);"
                                     [class.active]="page==selectedPage">
                                     {{ page }}
                                 </button>
@@ -48,23 +50,42 @@
         <footer class="footer bg-dark">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <h3 class="text-primary">Hakkımızda</h3>
-                        <p class="text-light">Tez için bu uygulamayı yapıyorum.</p>
+                    <div class="col-md-6">
+                        <h3 style="color: #fff; background-color: #808080; text-align: center;">Hakkımızda</h3>
+                        <p style="color: #fff">
+                            Merhaba! Ben, veri madenciliği ve göğüs kanseri üzerine önemli bir misyonu gerçekleştirmek üzere buradayım. Bu sayfa, bilgi ve farkındalık sağlamak, insanların yaşamlarını iyileştirmek ve toplumu daha iyi bir geleceğe taşımak amacıyla kurulmuştur.
+                        </p>
+                        
                     </div>
-                    <div class="col-md-4">
-                        <h3 class="text-success">İletişim Bilgileri</h3>
-                        <p class="text-light">Adres: Antalya</p>
-                        <p class="text-light">Telefon: 05354455118</p>
-                        <p class="text-light">E-posta: selinkahraman45@gmail.com</p>
+                    
+                    <div class="col-md-3">
+                        <h3 style="color: #fff; background-color: #808080; text-align: center;">İletişim Bilgileri</h3>
+                        <ul style="list-style-type: none; color: #fff;">
+                            <li><i class="fas fa-map-marker-alt"></i> Adres: Antalya</li>
+                            <li><i class="fas fa-phone"></i> Telefon: 05354455118</li>
+                            <li><i class="fas fa-envelope"></i> E-posta: selinkahraman45@gmail.com</li>
+                        </ul>
                     </div>
-                    <div class="col-md-4">
-                        <h3 class="text-danger">Sosyal Medya</h3>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a href="#">@selinnkhrmnn <i
-                                        class="fab fa-twitter text-light"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook text-light"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram text-light"></i></a>
+                    <div class="col-md-3">
+                        <h3 style="color: #fff; background-color: #808080; text-align: center;">Sosyal Medya</h3>
+                        <ul class="list-inline" style="text-align: center;">
+                            <li class="list-inline-item">
+                                <a href="#" style="color: #fff;">
+                                    <i class="fab fa-instagram text-light" style="font-size: 24px;"></i><br>
+                                    <span>@selin.khrmn</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" style="color: #fff;">
+                                    <i class="fab fa-facebook text-light" style="font-size: 24px;"></i><br>
+                                    <span>SelinKahraman</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" style="color: #fff;">
+                                    <i class="fab fa-twitter text-light" style="font-size: 24px;"></i><br>
+                                    <span>selinnkhrmn</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
